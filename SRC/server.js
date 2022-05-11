@@ -1,4 +1,4 @@
-//npm i nodemon
+
 require("./db/connection");
 const express = require("express");
 const movieRouter = require("./movie/movieRoutes");

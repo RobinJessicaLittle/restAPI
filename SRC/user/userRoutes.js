@@ -4,6 +4,7 @@ const { hashPass } = require("../middleware");
 const userRouter = Router();
 
 userRouter.post("/user", hashPass, addUser, listUsers, updateUser, deleteUsers);
+userRouter.post("/login", unHash, login);
 
 module.exports = userRouter;
 

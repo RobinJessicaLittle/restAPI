@@ -3,6 +3,7 @@
 // npm i express
 // npm i mongoose
 //npm i dotenv
+//npm i nodemon
 
 require("dotenv").config();
 const mongoose = require("mongoose");
