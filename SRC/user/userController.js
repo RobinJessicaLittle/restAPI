@@ -45,3 +45,13 @@ exports.updateUser = async (req, res) => {
         res.status(500).send({ error: error.message })
     }
   }; 
+
+  exports.login = async (req, res) => {
+    try {
+      const token = await jwt.sign({ _id: req.user._id }, process.env.SECRET);
+      res.status(200).send({ user: req.user.username, token: token });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ err: error.message });
+    }
+  };
